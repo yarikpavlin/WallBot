@@ -29,8 +29,6 @@ namespace WallBot_Version1._0
         public String[] comennts = { "Nice post!", "It's best post forever!", "Delete this shit", "OK" };
         public String[] TextPosts = { "OtherPost", "CoolPost", "Post of love", "Rich Post" };
         public Random r = new Random();
-        CurrencyManager cm1;
-        BindingSource bs1 = new BindingSource();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -112,10 +110,7 @@ namespace WallBot_Version1._0
                     sw.WriteLine(ids[i] + "%" + text[i] + " date:" + date[i] + " like: " + count_likes[i]);
                 }
                 sw.Close();
-            cm1 = (CurrencyManager)this.BindingContext[ids];
-            cm1.Refresh();
-            
-
+         
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -134,7 +129,7 @@ namespace WallBot_Version1._0
             {
                 start_AutoPost.Text = "StopAutoPost";
                 timer1.Enabled = true;
-                timer1.Interval = 3000 + r.Next(200, 1000);
+                timer1.Interval = 30000 + r.Next(2000,30000);
             }
         }
 
