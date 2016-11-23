@@ -130,6 +130,7 @@ namespace WallBot_Version1._0
             {
                 start_AutoPost.Text = "StopAutoPost";
                 timer1.Enabled = true;
+                timer1.Interval = 3000 + r.Next(200, 1000);
             }
         }
 
